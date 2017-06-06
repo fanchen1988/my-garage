@@ -35,6 +35,7 @@ RUN logstash-plugin remove x-pack
 #RUN logstash-plugin install logstash-output-file
 
 ADD bootstrap.sh /scripts/bootstrap.sh
+RUN chmod +x /scripts/*
 
 ENV LOGSTASH_ENTRYPOINT /usr/local/bin/docker-entrypoint
 ENV LOGSTASH_ROOT_PATH /usr/share/logstash
